@@ -17,19 +17,17 @@
   <body>
     <div class="container">
       <h1>Shopping cart</h1>
-      <div class="row">
-        <div class="col-xs-4 input">
+      <div id="shopping-cart" class="row my-3">
+        <div class="col-12 mt-3">
           <label for="product">Product:</label>
-          <input id="product" type="text">
-        </div>
-        <div class="col-xs-4 input">
+          <input id="product" class="input" type="text">
+
           <label for="price">Price:</label>
-          <input id="price" type="text">
+          <input id="price" class="input" type="text">
+
+          <button id="createButton">Create</button>
         </div>
-        <div>
-          <button class="col-xs-4 createButton">Create</button>
-        </div>
-      </div>
+      <h1>Total Price:<br>$</h1>
     </div>
   </body>
 </html>

@@ -1,7 +1,7 @@
-input{
-    width: 50%;
+.input{
+    width: 10%;
 }
 
-.createButton {
+#createButton {
     width: 10%;
 }
