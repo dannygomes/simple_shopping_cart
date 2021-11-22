@@ -13,11 +13,11 @@ var updatePrice = function () {
     $('.itemPrice').each(function (i, ele) {
         var price = parseFloat($(ele).text().substring(1)) * parseInt($(this).siblings('div').children('input').val());
         console.log($(this).closest('div'));
-        $(this).siblings('.itemTotal').html('$' + price);
+        $(this).siblings('.itemTotal').hide().html('$' + price).slideDown('slow');
         total = total + price;
     });
 
-    $('#finalPrice').html(total);
+    $('#finalPrice').hide().html('$' + total).slideDown('slow');
 }
 
 $(document).ready(function () {
@@ -30,7 +30,8 @@ $(document).ready(function () {
         '<div class="me-5"><label class="me-2" for="quantity-' + product + '"><strong>QTY</strong></label><input id="quantity-' + product + '" class="amount" type ="number" value="1"><button class="cancelButton">Cancel</button></div>' +
         '<p class="itemTotal price" class="me-5">$' + price + '</p></div>';
 
-        $('#shopping-cart').prepend(checkoutElement);
+        $(checkoutElement).hide().prependTo("#shopping-cart").fadeIn(1000);
+        //$('#shopping-cart').hide().prepend(checkoutElement).fadeIn('slow');
         $('.price').css("width", "5%");
         $('#product').val("");
         $('#price').val("");
